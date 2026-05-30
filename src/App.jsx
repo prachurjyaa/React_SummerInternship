@@ -1,17 +1,17 @@
-import {StrictMode} from 'react'
-import './App.css'
-import Card from './Card.jsx'
 import Header from './Header.jsx'
 import Products from './Products.jsx'
+import { useState } from 'react'
 
 
 function App() {
-
+  const[searchQuery,setSearchQuery]=useState("")
   return (
-    <StrictMode>
-      <Header />
-      <Products/>
-    </StrictMode>
+    <>
+      <Header setSearchQuery={setSearchQuery} searchQuery={searchQuery}/> 
+      {searchQuery}
+      <Products searchQuery={searchQuery}/>
+     
+    </>
   )}
   
 
