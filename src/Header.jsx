@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 function Header({ setSearchQuery, searchQuery }) {
     //function to enter anything and it will print somewhere on the screen
     // const [searchTerm, setSearchTerm] = useState("")
@@ -17,12 +17,12 @@ function Header({ setSearchQuery, searchQuery }) {
     <input  style={{backgroundColor:"white",color:"black"}} type="text" placeholder="Search..." onChange={(e) => setSearchQuery(e.target.value)} />
     {/* {searchQuery} */}
     <nav style={{display:"flex",gap:"20px"}}>
-        <a href="">Home</a>
-        <a href="">Products</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="">Signup</a>
-        <a href="">SignIn</a>
+        <Link to="/">Home</Link>
+        <Link to="/products">Products</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/signup">Signup</Link>
+        <Link to="/signin">SignIn</Link>
     </nav>
     <button onClick={toggleBg}>Dark/Light</button>
   </header>
